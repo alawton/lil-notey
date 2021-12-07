@@ -1,0 +1,35 @@
+{
+  "name": "Lil' Notey",
+  "description": "Adds a tiny note pal you can write in. This will add a small WYSIWYG editor to your extensions.",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "icons": {
+      "16": "/icons/notepad16.png",
+      "32": "/icons/notepad32.png",
+      "48": "/icons/notepad48.png",
+      "128": "/icons/notepad128.png"
+  },
+  "action": {
+    "default_title": "Click Me",
+    "default_popup": "./popup/popup_menu.html",
+    "default_icon": {
+      "16": "/icons/notepad16.png",
+      "32": "/icons/notepad32.png",
+      "48": "/icons/notepad48.png",
+      "128": "/icons/notepad128.png"
+    }
+  },
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Opens popup"
+    }
+  }
+}
